@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, World! - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+
+	<script type="text/javascript">
+		<!--
+			document.querySelector('#popupbox').addEventListener('mouseenter', function () {
+				document.querySelector('#popuptrial').setAttribute('visible', true);
+});
+		//->>
+		
+	</script>
+ </head>
+  <body>
+
+
+<a-scene>
+  <a-assets>
+    <audio id="click-sound" src="audio/click.ogg"></audio>
+
+    <!-- Images. -->
+    <img id="lab_1" src="1.jpg">
+	<img id="lab_2" src="2.jpg">
+	<img id="lab_3" src="3.jpg">
+	<img id="lab_4" src="4.jpg">
+	<img id="lab_1_thumb" src="lab1-thumb.png">
+	<img id="lab_2_thumb" src="lab2-thumb.png">
+	<img id="lab_3_thumb" src="lab3-thumb.png">
+	<img id="lab_4_thumb" src="lab4-thumb.png">
+	<script id="plane" type="text/html">
+    <a-entity class="link"
+      geometry="primitive: plane; height: 1; width: 1"
+      material="shader: flat; src: ${thumb}"
+      sound="on: click; src: #click-sound"
+      event-set__1="_event: mousedown; scale: 1 1 1"
+      event-set__2="_event: mouseup; scale: 1.2 1.2 1"
+      event-set__3="_event: mouseenter; scale: 1.2 1.2 1"
+      event-set__4="_event: mouseleave; scale: 1 1 1"></a-entity>
+ 	</script>
+
+ 	
+  </a-assets>
+
+  <!-- 360-degree image. -->
+  <a-sky id="image-360" radius="10" src="#lab_2"></a-sky>
+
+  <!-- Link we will build. -->
+  <a-entity id="links" layout="layout: line; margin: 1.5" position="-3 -1 -4">
+  	<a-entity template="src: #plane" data-thumb="#lab1-thumb"></a-entity>
+	<a-entity template="src: #plane" data-thumb="#lab2-thumb"></a-entity>
+	<a-entity template="src: #plane" data-thumb="#lab3-thumbb"></a-entity>
+  </a-entity>
+
+  <!-- Camera + Cursor. -->
+  <a-camera>
+    <a-cursor id="cursor">
+      <a-animation begin="click" easing="ease-in" attribute="scale"
+                   fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
+      <a-animation begin="cursor-fusing" easing="ease-in" attribute="scale"
+                   from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
+    </a-cursor>
+  </a-camera>
+</a-scene>
+
+  </body>
+</html>
+wwwww
