@@ -31,7 +31,7 @@
 	<img id="lab_2_thumb" src="lab2-thumb.png">
 	<img id="lab_3_thumb" src="lab3-thumb.png">
 	<img id="lab_4_thumb" src="lab4-thumb.png">
-	<script id="link" type="text/nunjucks">
+	<script id="plane" type="text/html">
     <a-entity class="link"
       geometry="primitive: plane; height: 1; width: 1"
       material="shader: flat; src: ${thumb}"
@@ -42,12 +42,7 @@
       event-set__4="_event: mouseleave; scale: 1 1 1"></a-entity>
  	</script>
 
- 	<script id="plane" type="text/html">
-    <a-entity class="link"
-      geometry="primitive: plane; height: 1; width: 1"
-      material="shader: flat; src: ${thumb}"
-      sound="on: click; src: #click-sound"></a-entity>
- 	</script>
+ 	
   </a-assets>
 
   <!-- 360-degree image. -->
