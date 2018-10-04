@@ -1,78 +1,46 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Hello, World! - A-Frame</title>
-    <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-template-component@3.x.x/dist/aframe-template-component.min.js"></script>
-    <script src="https://unpkg.com/aframe-layout-component@3.x.x/dist/aframe-layout-component.min.js"></script>
-    <script src="https://unpkg.com/aframe-event-set-component@3.x.x/dist/aframe-event-set-component.min.js"></script>
+<a-scene>
+  <a-assets>
+    <audio id="click-sound" src="audio/click.ogg"></audio>
 
-    <meta name="description" content="Hello, World! - A-Frame">
-    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <!-- Images. -->
+    <img id="lab_1" src="1.jpg">
+	<img id="lab_2" src="2.jpg">
+	<img id="lab_3" src="3.jpg">
+	<img id="lab_4" src="4.jpg">
+	<img id="lab_1_thumb" src="lab1-thumb.png">
+	<img id="lab_2_thumb" src="lab2-thumb.png">
+	<img id="lab_3_thumb" src="lab3-thumb.png">
+	<img id="lab_4_thumb" src="lab4-thumb.png">
+	<script id="link" type="text/nunjucks">
+    <a-entity class="link"
+      geometry="primitive: plane; height: 1; width: 1"
+      material="shader: flat; src: ${thumb}"
+      sound="on: click; src: #click-sound"
+      event-set__1="_event: mousedown; scale: 1 1 1"
+      event-set__2="_event: mouseup; scale: 1.2 1.2 1"
+      event-set__3="_event: mouseenter; scale: 1.2 1.2 1"
+      event-set__4="_event: mouseleave; scale: 1 1 1"></a-entity>
+ 	</script>
+  </a-assets>
 
-	<script type="text/javascript">
-		<!--
-			document.querySelector('#popupbox').addEventListener('mouseenter', function () {
-				document.querySelector('#popuptrial').setAttribute('visible', true);});
-		//->>
-		
-	</script>
+  <!-- 360-degree image. -->
+  <a-sky id="image-360" radius="10" src="#lab_2"></a-sky>
 
-  </head>
-  <body>
-    <a-scene vr-mode-ui="enabled: true">
-	  <a-assets>
-		<img id="lab_1" src="1.jpg">
-		<img id="lab_2" src="2.jpg">
-		<img id="lab_3" src="3.jpg">
-		<img id="lab_4" src="4.jpg">
-		<img id="lab_1_thumb" src="lab1-thumb.png">
-		<img id="lab_2_thumb" src="lab2-thumb.png">
-		<img id="lab_3_thumb" src="lab3-thumb.png">
-		<img id="lab_4_thumb" src="lab4-thumb.png">
-		<img id="deneme" src="deneme.png">
-		<img id="deneme1" src="deneme1.png">
-		<img id="deneme2" src="deneme2.png">
-		<script id="plane" type="text/html">
-   			<a-entity class="link"
-      		geometry="primitive: plane; height: 1; width: 1"
-     		material="shader: flat; src: ${thumb}"
-     		sound="on: click; src: #click-sound"
-     		event-set__1="_event: mousedown; scale: 1 1 1"
-    		event-set__2="_event: mouseup; scale: 1.2 1.2 1"
-     		event-set__3="_event: mouseenter; scale: 1.2 1.2 1"
-    		event-set__4="_event: mouseleave; scale: 1 1 1"></a-entity>
- 		</script>
-	  </a-assets>
+  <!-- Link we will build. -->
+  <a-entity id="links" layout="layout: line; margin: 1.5" position="-3 -1 -4">
+  	<a-entity template="src: #plane" data-thumb="#lab1-thumb"></a-entity>
+	<a-entity template="src: #plane" data-thumb="#lab2-thumb"></a-entity>
+	<a-entity template="src: #plane" data-thumb="#lab3-thumbb"></a-entity>
+  </a-entity>
 
-
-	  
-	  <a-sky id="image-360" radius ="15" src="#lab_2"></a-sky>
-	  <a-link "href: https://hera-doors.github.io/; title: Subscribe! image:#lab_2_thumb">Subscribe!</a-link>
-	  <a-entity id="sky_entity" class="link"
-		position="-3 0 -1"
-		rotation="0 150 0"
-		geometry="primitive: plane; height: 1;width: 1
-		material="shader:flat; src:#lab_1_thumb"></a-entity>
-	  <a-box id ="popupbox" src="#lab_1_thumb" position="0 -1 -3" rotation="30 45 0" color="#4CC3D9"></a-box>
-	  <a-image id="popuptrial" visible = false src="#lab_1_thumb"></a-image>
-	  <a-entity camera look-controls wasd-controls></a-entity>
-
-		<a-entity id="links" layout="layout: line; margin: 1.5" position="-3 -1 -4">
-			<a-entity template="src: #plane" data-thumb="#deneme"></a-entity>
-			<a-entity template="src: #plane" data-thumb="#deneme1"></a-entity>
-			<a-entity template="src: #plane" data-thumb="#deneme2"></a-entity>
-		</a-entity>
-	     
-	  <a-camera>
-	     <a-cursor id="cursor">
+  <!-- Camera + Cursor. -->
+  <a-camera>
+    <a-cursor id="cursor">
       <a-animation begin="click" easing="ease-in" attribute="scale"
                    fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
       <a-animation begin="cursor-fusing" easing="ease-in" attribute="scale"
                    from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
     </a-cursor>
   </a-camera>
-    </a-scene>
-  </body>
-</html>
+</a-scene>
+
