@@ -1,154 +1,26 @@
 # 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
-# File Created: 05.10.2018 12:30:48
+# File Created: 05.10.2018 21:22:16
 
-newmtl power_bank_Plastic_mat
-	Ns 96.0784
+newmtl Material__90
+	Ns 31.0000
 	Ni 1.5000
 	d 1.0000
 	Tr 0.0000
 	Tf 1.0000 1.0000 1.0000 
 	illum 2
-	Ka 1.0000 1.0000 1.0000
-	Kd 1.0000 1.0000 1.0000
-	Ks 0.1000 0.1000 0.1000
+	Ka 0.8157 0.4627 0.1294
+	Kd 0.8157 0.4627 0.1294
+	Ks 0.5228 0.5228 0.5228
 	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\Libraries\Downloads\in game objects doors\cadnav-1P423151048\cadnav.com_model\Models_E0120A032\plastic.jpg
-	map_Kd D:\Libraries\Downloads\in game objects doors\cadnav-1P423151048\cadnav.com_model\Models_E0120A032\plastic.jpg
 
-newmtl power_bank_Silver
-	Ns 96.0784
+newmtl Material__78
+	Ns 31.0000
 	Ni 1.5000
 	d 1.0000
 	Tr 0.0000
 	Tf 1.0000 1.0000 1.0000 
 	illum 2
-	Ka 1.0000 1.0000 1.0000
-	Kd 1.0000 1.0000 1.0000
-	Ks 0.1000 0.1000 0.1000
+	Ka 0.0314 0.0314 0.0314
+	Kd 0.0314 0.0314 0.0314
+	Ks 0.5228 0.5228 0.5228
 	Ke 0.0000 0.0000 0.0000
-
-newmtl power_bank_logo_mat
-	Ns 96.0784
-	Ni 1.5000
-	d 1.0000
-	Tr 0.0000
-	Tf 1.0000 1.0000 1.0000 
-	illum 2
-	Ka 1.0000 1.0000 1.0000
-	Kd 1.0000 1.0000 1.0000
-	Ks 0.1000 0.1000 0.1000
-	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\Libraries\Downloads\in game objects doors\cadnav-1P423151048\cadnav.com_model\Models_E0120A032\logo.jpg
-	map_Kd D:\Libraries\Downloads\in game objects doors\cadnav-1P423151048\cadnav.com_model\Models_E0120A032\logo.jpg
-
-newmtl power_bank_Vent_mat
-	Ns 96.0784
-	Ni 1.5000
-	d 1.0000
-	Tr 0.0000
-	Tf 1.0000 1.0000 1.0000 
-	illum 2
-	Ka 1.0000 1.0000 1.0000
-	Kd 1.0000 1.0000 1.0000
-	Ks 0.1000 0.1000 0.1000
-	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\Libraries\Downloads\in game objects doors\cadnav-1P423151048\cadnav.com_model\Models_E0120A032\Vent.jpg
-	map_Kd D:\Libraries\Downloads\in game objects doors\cadnav-1P423151048\cadnav.com_model\Models_E0120A032\Vent.jpg
-
-newmtl power_bank_Top
-	Ns 96.0784
-	Ni 1.5000
-	d 1.0000
-	Tr 0.0000
-	Tf 1.0000 1.0000 1.0000 
-	illum 2
-	Ka 1.0000 1.0000 1.0000
-	Kd 1.0000 1.0000 1.0000
-	Ks 0.1000 0.1000 0.1000
-	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\Libraries\Downloads\in game objects doors\cadnav-1P423151048\cadnav.com_model\Models_E0120A032\top_glow.jpg
-	map_Kd D:\Libraries\Downloads\in game objects doors\cadnav-1P423151048\cadnav.com_model\Models_E0120A032\top_glow.jpg
-
-newmtl power_bank_top_1
-	Ns 96.0784
-	Ni 1.5000
-	d 1.0000
-	Tr 0.0000
-	Tf 1.0000 1.0000 1.0000 
-	illum 2
-	Ka 1.0000 1.0000 1.0000
-	Kd 1.0000 1.0000 1.0000
-	Ks 0.1000 0.1000 0.1000
-	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\Libraries\Downloads\in game objects doors\cadnav-1P423151048\cadnav.com_model\Models_E0120A032\top_1_glow.jpg
-	map_Kd D:\Libraries\Downloads\in game objects doors\cadnav-1P423151048\cadnav.com_model\Models_E0120A032\top_1_glow.jpg
-
-newmtl power_bank_Grid
-	Ns 96.0784
-	Ni 1.5000
-	d 1.0000
-	Tr 0.0000
-	Tf 1.0000 1.0000 1.0000 
-	illum 2
-	Ka 1.0000 1.0000 1.0000
-	Kd 1.0000 1.0000 1.0000
-	Ks 0.1000 0.1000 0.1000
-	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\Libraries\Downloads\in game objects doors\cadnav-1P423151048\cadnav.com_model\Models_E0120A032\grid.jpg
-	map_Kd D:\Libraries\Downloads\in game objects doors\cadnav-1P423151048\cadnav.com_model\Models_E0120A032\grid.jpg
-
-newmtl power_bank_fan_grill_texture
-	Ns 96.0784
-	Ni 1.5000
-	d 1.0000
-	Tr 0.0000
-	Tf 1.0000 1.0000 1.0000 
-	illum 2
-	Ka 1.0000 1.0000 1.0000
-	Kd 1.0000 1.0000 1.0000
-	Ks 0.1000 0.1000 0.1000
-	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\Libraries\Downloads\in game objects doors\cadnav-1P423151048\cadnav.com_model\Models_E0120A032\fan_grill.jpg
-	map_Kd D:\Libraries\Downloads\in game objects doors\cadnav-1P423151048\cadnav.com_model\Models_E0120A032\fan_grill.jpg
-
-newmtl power_bank_Filter_3_mat
-	Ns 96.0784
-	Ni 1.5000
-	d 1.0000
-	Tr 0.0000
-	Tf 1.0000 1.0000 1.0000 
-	illum 2
-	Ka 1.0000 1.0000 1.0000
-	Kd 1.0000 1.0000 1.0000
-	Ks 0.1000 0.1000 0.1000
-	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\Libraries\Downloads\in game objects doors\cadnav-1P423151048\cadnav.com_model\Models_E0120A032\Filter_3.jpg
-	map_Kd D:\Libraries\Downloads\in game objects doors\cadnav-1P423151048\cadnav.com_model\Models_E0120A032\Filter_3.jpg
-
-newmtl power_bank_Filter_1_mat
-	Ns 96.0784
-	Ni 1.5000
-	d 1.0000
-	Tr 0.0000
-	Tf 1.0000 1.0000 1.0000 
-	illum 2
-	Ka 1.0000 1.0000 1.0000
-	Kd 1.0000 1.0000 1.0000
-	Ks 0.1000 0.1000 0.1000
-	Ke 0.0000 0.0000 0.0000
-	map_Ka Map__9_Wood.tga
-	map_Kd Map__9_Wood.tga
-
-newmtl power_bank_Filter_2_mat
-	Ns 96.0784
-	Ni 1.5000
-	d 1.0000
-	Tr 0.0000
-	Tf 1.0000 1.0000 1.0000 
-	illum 2
-	Ka 1.0000 1.0000 1.0000
-	Kd 1.0000 1.0000 1.0000
-	Ks 0.1000 0.1000 0.1000
-	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\Libraries\Downloads\in game objects doors\cadnav-1P423151048\cadnav.com_model\Models_E0120A032\Filter_2.jpg
-	map_Kd D:\Libraries\Downloads\in game objects doors\cadnav-1P423151048\cadnav.com_model\Models_E0120A032\Filter_2.jpg
