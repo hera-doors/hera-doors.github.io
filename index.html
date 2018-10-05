@@ -5,6 +5,15 @@
     <meta name="description" content="JavaScript - A-Frame School">
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+	<script>
+    AFRAME.registerComponent("get_selection", {
+      var selection1 = ""
+      document.querySelector('a-entity').addEventListener('click', function (evt) {
+      console.log('This 2D element was clicked!');
+  });
+    })
+
+	</script>
     <!-- <script src="link.js"></script> -->
   </head>
   <body>
@@ -62,10 +71,11 @@
         <img id="lab4" src="images/lab4-thumb.png">
       </a-assets>
       <a-camera>
-        <a-cursor color="#4CC3D9">
+        <a-cursor fuse="true" color="#4CC3D9">
 
         </a-cursor>
       </a-camera>
+      <a-entity oculus-go-controls></a-entity>
       <a-box position="-3 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow
              event-set__enter="_event: mouseenter; _target: #changing_image; src: #lab1; visible: true"
              event-set__leave="_event: mouseleave; _target: #changing_image; visible: false"
@@ -87,7 +97,7 @@
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
 
       <a-entity obj-model="obj: #coffee-card-obj; mtl: #coffee-card-mtl" position="1 0.75 3"
-      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #coffee-card-img; visible: true"
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #coffeecard-img; visible: true"
       event-set__leave="_event: mouseleave; _target: #changing_image_desk; visible: false"
       ></a-entity>
       <a-entity obj-model="obj: #cup-obj; mtl: #cup-mtl" position="1 0.75 3"
@@ -127,12 +137,8 @@
       event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #plushie-img; visible: true"
       event-set__leave="_event: mouseleave; _target: #changing_image_desk; visible: false"
       ></a-entity>
-      <a-entity obj-model="obj: #powerbank-obj; mtl: #powerbank-mtl" position="1 0.75 3"
-      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #powerbank-img; visible: true"
-      event-set__leave="_event: mouseleave; _target: #changing_image_desk; visible: false"
-      ></a-entity>
-      <a-entity obj-model="obj: #speakers-obj; mtl: #speakers-mtl" position="1 0.75 3"
-      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #speakers-img; visible: true"
+	  <a-entity obj-model="obj: #powerbank-obj; mtl: #powerbank-mtl" position="1 0.75 3"
+      event-set__enter="_event: mouseenter; _target: #table1; src: #powerbank-img; visible: true"
       event-set__leave="_event: mouseleave; _target: #changing_image_desk; visible: false"
       ></a-entity>
       <a-entity obj-model="obj: #table1-obj; mtl: #table1-mtl" position="-1 0.75 3"></a-entity>
@@ -142,7 +148,7 @@
       <a-image id="changing_image_desk" position="1 2 4" rotation="0 180"></a-image>
       <a-sky color="#ECECEC"></a-sky>
       <a-entity geometry="primitive: box" link="href: https://hera-doors.github.io/; title: Subscribe!" position="0 5 -5" text="value:Subscribe!" id="subscribeButton"></a-entity>
-
+		<a-entity id="table1select"></a-entity>
     </a-scene>
   </body>
 </html>
