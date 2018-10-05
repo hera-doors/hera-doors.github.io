@@ -1,0 +1,25 @@
+bike mount.mtl
+bike mount.obj
+coffee-card.mtl
+coffee-card.obj
+collar.mtl
+collar.obj
+cup.mtl
+cup.obj
+earphones.mtl
+earphones.obj
+filelist.txt
+lowpolytree.mtl
+lowpolytree.obj
+notebook.mtl
+notebook.obj
+plushie.mtl
+plushie.obj
+powerbank.mtl
+powerbank.obj
+spa.mtl
+spa.obj
+speakers.mtl
+speakers.obj
+table.mtl
+table.obj

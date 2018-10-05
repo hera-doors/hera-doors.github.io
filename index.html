@@ -5,17 +5,61 @@
     <meta name="description" content="JavaScript - A-Frame School">
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
-    <script src="link.js"></script> 
+    <!-- <script src="link.js"></script> -->
   </head>
   <body>
     <a-scene school-playground>
       <a-assets>
-        <a-asset-item  id="tree-obj" src="https://cdn.glitch.com/a831d5c1-7b42-4089-9548-1f5f33133d01%2Flowpolytree.obj?1538687365195"></a-asset-item>
-        <a-asset-item  id="tree-mtl" src="https://cdn.glitch.com/a831d5c1-7b42-4089-9548-1f5f33133d01%2Flowpolytree.mtl?1538687365314"></a-asset-item>
-        <img id="lab1" src="https://cdn.glitch.com/a831d5c1-7b42-4089-9548-1f5f33133d01%2Flab1-thumb.png?1538688305163">
-        <img id="lab2" src="https://cdn.glitch.com/a831d5c1-7b42-4089-9548-1f5f33133d01%2Flab2-thumb.png?1538688305071">
-        <img id="lab3" src="https://cdn.glitch.com/a831d5c1-7b42-4089-9548-1f5f33133d01%2Flab3-thumb.png?1538688304852">
-        <img id="lab4" src="https://cdn.glitch.com/a831d5c1-7b42-4089-9548-1f5f33133d01%2Flab4-thumb.png?1538688304959">
+        <a-asset-item  id="tree-obj" src="objects/lowpolytree.obj"></a-asset-item>
+        <a-asset-item  id="tree-mtl" src="objects/lowpolytree.mtl"></a-asset-item>
+        <a-asset-item  id="bike-mount-mtl" src="objects/bike mount.mtl"></a-asset-item>
+        <a-asset-item  id="bike-mount-obj" src="objects/bike mount.obj"></a-asset-item>
+        <a-asset-item  id="coffee-card-mtl" src="objects/coffee-card.mtl"></a-asset-item>
+        <a-asset-item  id="coffee-card-obj" src="objects/coffee-card.obj"></a-asset-item>
+        <a-asset-item  id="collar-mtl" src="objects/collar.mtl"></a-asset-item>
+        <a-asset-item  id="collar-obj" src="objects/collar.obj"></a-asset-item>
+        <a-asset-item  id="cup-mtl" src="objects/cup.mtl"></a-asset-item>
+        <a-asset-item  id="cup-obj" src="objects/cup.obj"></a-asset-item>
+        <a-asset-item  id="earphones-mtl" src="objects/earphones.mtl"></a-asset-item>
+        <a-asset-item  id="earphones-obj" src="objects/earphones.obj"></a-asset-item>
+        <a-asset-item  id="kidsmagazine-mtl" src="objects/magazine.mtl"></a-asset-item>
+        <a-asset-item  id="kidsmagazine-obj" src="objects/magazine.obj"></a-asset-item>
+        <a-asset-item  id="notebook-mtl" src="objects/notebook.mtl"></a-asset-item>
+        <a-asset-item  id="notebook-obj" src="objects/notebook.obj"></a-asset-item>
+        <a-asset-item  id="plushie-mtl" src="objects/plushie.mtl"></a-asset-item>
+        <a-asset-item  id="plushie-obj" src="objects/plushie.obj"></a-asset-item>
+        <a-asset-item  id="powerbank-mtl" src="objects/powerbank.mtl"></a-asset-item>
+        <a-asset-item  id="powerbank-obj" src="objects/powerbank.obj"></a-asset-item>
+        <a-asset-item  id="spa-mtl" src="objects/spa.mtl"></a-asset-item>
+        <a-asset-item  id="spa-obj" src="objects/spa.obj"></a-asset-item>
+        <a-asset-item  id="speakers-mtl" src="objects/speakers.mtl"></a-asset-item>
+        <a-asset-item  id="speakers-obj" src="objects/speakers.obj"></a-asset-item>
+        <a-asset-item  id="table1-mtl" src="objects/table1.mtl"></a-asset-item>
+        <a-asset-item  id="table1-obj" src="objects/table1.obj"></a-asset-item>
+        <a-asset-item  id="table2-mtl" src="objects/table2.mtl"></a-asset-item>
+        <a-asset-item  id="table2-obj" src="objects/table2.obj"></a-asset-item>
+        <a-asset-item  id="table3-mtl" src="objects/table3.mtl"></a-asset-item>
+        <a-asset-item  id="table3-obj" src="objects/table3.obj"></a-asset-item>
+        <a-asset-item  id="toytrucs-obj" src="objects/toytrucs.obj"></a-asset-item>
+        <a-asset-item  id="toytrucs-mtl" src="objects/toytrucs.mtl"></a-asset-item>
+        <a-asset-item  id="bike-mount-img" src="images/obj_imgs/bikemount.png"></a-asset-item>
+        <a-asset-item  id="coffeecard-img" src="images/obj_imgs/coffeecard.png"></a-asset-item>
+        <a-asset-item  id="collar-img" src="images/obj_imgs/collar.png"></a-asset-item>
+        <a-asset-item  id="cup-img" src="images/obj_imgs/cup.png"></a-asset-item>
+        <a-asset-item  id="earphones-img" src="images/obj_imgs/earphones.png"></a-asset-item>
+        <a-asset-item  id="kidsmagazine-img" src="images/obj_imgs/kidsmagazine.png"></a-asset-item>
+        <a-asset-item  id="notebook-img" src="images/obj_imgs/notebook.png"></a-asset-item>
+        <a-asset-item  id="plushie-img" src="images/obj_imgs/plushie.png"></a-asset-item>
+        <a-asset-item  id="powerbank-img" src="images/obj_imgs/powerbank.png"></a-asset-item>
+        <a-asset-item  id="spa-img" src="images/obj_imgs/spa.png"></a-asset-item>
+        <a-asset-item  id="speakers-img" src="images/obj_imgs/speakers.png"></a-asset-item>
+        <a-asset-item  id="toytrucs-img" src="images/obj_imgs/toytrucs.png"></a-asset-item>
+
+
+        <img id="lab1" src="images/lab1-thumb.png">
+        <img id="lab2" src="images/lab2-thumb.png">
+        <img id="lab3" src="images/lab3-thumb.png">
+        <img id="lab4" src="images/lab4-thumb.png">
       </a-assets>
       <a-camera>
         <a-cursor color="#4CC3D9">
@@ -41,11 +85,64 @@
       <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
       <a-cylinder id="hideCylinder" position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl" position="1 0.75 3"></a-entity>
+
+      <a-entity obj-model="obj: #coffee-card-obj; mtl: #coffee-card-mtl" position="1 0.75 3"
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #coffee-card-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk; visible: false"
+      ></a-entity>
+      <a-entity obj-model="obj: #cup-obj; mtl: #cup-mtl" position="1 0.75 3"
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #cup-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk; visible: false"
+      ></a-entity>
+      <a-entity obj-model="obj: #spa-obj; mtl: #spa-mtl" position="1 0.75 3"
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #spa-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk; visible: false"
+      ></a-entity>
+      <a-entity obj-model="obj: #notebook-obj; mtl: #notebook-mtl" position="1 0.75 3"
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #notebook-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk; visible: false"
+      ></a-entity>
+      <a-entity obj-model="obj: #kidsmagazine-obj; mtl: #kidsmagazine-mtl" position="1 0.75 3"
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #kidsmagazine-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk; visible: false"
+      ></a-entity>
+      <a-entity obj-model="obj: #bike-mount-obj; mtl: #bike-mount-mtl" position="1 0.75 3"
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #bike-mount-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk; visible: false"
+      ></a-entity>
+      <a-entity obj-model="obj: #collar-obj; mtl: #collar-mtl" position="1 0.75 3"
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #collar-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk; visible: false"
+      ></a-entity>
+      <a-entity obj-model="obj: #toytrucs-obj; mtl: #toytrucs-mtl" position="1 0.75 3"
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #toytrucs-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk; visible: false"
+      ></a-entity>
+      <a-entity obj-model="obj: #earphones-obj; mtl: #earphones-mtl" position="1 0.75 3"
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #earphones-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk; visible: false"
+      ></a-entity>
+      <a-entity obj-model="obj: #lowpolytree-obj; mtl: #lowpolytree-mtl" position="1 0.75 3"></a-entity>
+      <a-entity obj-model="obj: #plushie-obj; mtl: #plushie-mtl" position="1 0.75 3"
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #plushie-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk; visible: false"
+      ></a-entity>
+      <a-entity obj-model="obj: #powerbank-obj; mtl: #powerbank-mtl" position="1 0.75 3"
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #powerbank-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk; visible: false"
+      ></a-entity>
+      <a-entity obj-model="obj: #speakers-obj; mtl: #speakers-mtl" position="1 0.75 3"
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #speakers-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk; visible: false"
+      ></a-entity>
+      <a-entity obj-model="obj: #table1-obj; mtl: #table1-mtl" position="-1 0.75 3"></a-entity>
+      <a-entity obj-model="obj: #table2-obj; mtl: #table2-mtl" position="1 0.75 3"></a-entity>
+      <a-entity obj-model="obj: #table3-obj; mtl: #table3-mtl" position="1 0.75 3"></a-entity>
       <a-image id="changing_image" src="#lab1" position="0 3 -5"></a-image>
+      <a-image id="changing_image_desk" position="1 2 4" rotation="0 180"></a-image>
       <a-sky color="#ECECEC"></a-sky>
       <a-entity geometry="primitive: box" link="href: https://hera-doors.github.io/; title: Subscribe!" position="0 5 -5" text="value:Subscribe!" id="subscribeButton"></a-entity>
-      
+
     </a-scene>
   </body>
 </html>
