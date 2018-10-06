@@ -57,7 +57,7 @@
     AFRAME.registerComponent('change-video',{
       init: function(){
        let el = this.el;
-       let vid = document.querySelector("#dialogue-video");
+       let vid = document.querySelector("#camera");
        vid.setAttribute('src', 'videos/konusma1.mp4');
        vid.pause();
        console.log("Video changed.");
@@ -121,7 +121,7 @@
         <video id="dialogue2" src="videos/konusma2.mp4"></video>
         <video id="dialogue3" src="videos/konusma3.mp4"></video>
       </a-assets>
-<a-entity position="4.607 2 15.941" camera look-controls wasd-controls>
+<a-entity id="camera" position="4.607 2 15.941" camera look-controls wasd-controls>
   <a-entity cursor="fuse: true; fuseTimeout: 500"
             position="0 0 -1"
             geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
@@ -130,7 +130,9 @@
 </a-entity>
 <a-entity scale="4 4 4" position="0 -3 0">
 <!-- Table 1 -->
-      <a-entity obj-model="obj: #table1-obj; mtl: #table1-mtl" position="-1 0.75 3"></a-entity>
+      <a-entity obj-model="obj: #table1-obj; mtl: #table1-mtl" position="-1 0.75 3"
+      event-set__enter="_event: mouseenter; _target: #camera; position: -3.508 1.7 16.275"
+      ></a-entity>
       <a-plane id="video_plane" material="src : #dialogue1" width="1.77" height="1" position="-0.93 1.504 2.696" scale="0.507 0.507 0.507" video-handler1></a-plane>
       <a-image id="changing_image_desk1" position="-0.910 1.109 2.576" scale="0.5 0.235 1"></a-image>
 
@@ -154,7 +156,9 @@
 
 
 <!-- Table 2 -->
-      <a-entity obj-model="obj: #table2-obj; mtl: #table2-mtl" position="1 0.75 3"></a-entity>
+      <a-entity obj-model="obj: #table2-obj; mtl: #table2-mtl" position="1 0.75 3"
+      event-set__enter="_event: mouseenter; _target: #camera; position: 4.514 1.7 16.275"
+      ></a-entity>
       <a-plane id="video_plane" material="src : #dialogue2" width="1.77" height="1" position= "1.106 1.504 2.696" scale="0.507 0.507 0.507" video-handler2></a-plane>
       <a-image id="changing_image_desk2" position="1.127 1.109 2.576" scale="0.5 0.235 1"></a-image>
 
@@ -177,7 +181,9 @@
       event-set__leave="_event: mouseleave; _target: #changing_image_desk2; "
       ></a-entity>
 <!-- Table 3 -->
-      <a-entity obj-model="obj: #table3-obj; mtl: #table3-mtl" position="1 0.75 3"></a-entity>
+      <a-entity obj-model="obj: #table3-obj; mtl: #table3-mtl" position="1 0.75 3"
+      event-set__enter="_event: mouseenter; _target: #camera; position: 12 1.7 16.275"
+      ></a-entity>
       <a-plane id="video_plane" material="src : #dialogue3" width="1.77" height="1" position="2.998 1.504 2.696" scale="0.507 0.507 0.507" video-handler3></a-plane>
       <a-image id="changing_image_desk3" position="3.041 1.109 2.576" scale="0.5 0.235 1"></a-image>
 
