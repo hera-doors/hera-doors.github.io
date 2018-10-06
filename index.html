@@ -8,6 +8,62 @@
 <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
   </head>
   <body>
+    <script>
+    AFRAME.registerComponent('video-handler1',{
+      init: function(){
+       let el = this.el;
+       let vid = document.querySelector("#dialogue1");
+       vid.pause();
+       el.addEventListener('mouseenter',function(){
+          vid.play();
+       });
+       el.addEventListener('mouseleave',function(){
+          vid.pause();
+       });
+      }
+    });
+    </script>
+    <script>
+    AFRAME.registerComponent('video-handler2',{
+      init: function(){
+       let el = this.el;
+       let vid = document.querySelector("#dialogue2");
+       vid.pause();
+       el.addEventListener('mouseenter',function(){
+          vid.play();
+       });
+       el.addEventListener('mouseleave',function(){
+          vid.pause();
+       });
+      }
+    });
+    </script>
+    <script>
+    AFRAME.registerComponent('video-handler3',{
+      init: function(){
+       let el = this.el;
+       let vid = document.querySelector("#dialogue3");
+       vid.pause();
+       el.addEventListener('mouseenter',function(){
+          vid.play();
+       });
+       el.addEventListener('mouseleave',function(){
+          vid.pause();
+       });
+      }
+    });
+    </script>
+    <script>
+    AFRAME.registerComponent('change-video',{
+      init: function(){
+       let el = this.el;
+       let vid = document.querySelector("#dialogue-video");
+       vid.setAttribute('src', 'videos/konusma1.mp4');
+       vid.pause();
+       console.log("Video changed.");
+      }
+    });
+    </script>
     <a-scene school-playground>
 
       <a-assets>
@@ -54,13 +110,18 @@
         <a-asset-item  id="speakers-img" src="images/obj_imgs/speakers.png"></a-asset-item>
         <a-asset-item  id="toytrucs-img" src="images/obj_imgs/toytrucs.png"></a-asset-item>
 
+        <!-- persons -->
+        <a-asset-item id="person1-mtl" src="objects/person1.mtl"></a-asset-item>
+        <a-asset-item id="person1-obj" src="objects/person1.obj"></a-asset-item>
         <!-- skies -->
         <a-asset-item id="sky1" src="images/skies/1.jpg"></a-asset-item>
 
         <!-- dialogue videos -->
-        <video id="dialogue2" src="videos/konusma2.mp4" autoplay></video>
+        <video id="dialogue1" src="videos/konusma1.mp4"></video>
+        <video id="dialogue2" src="videos/konusma2.mp4"></video>
+        <video id="dialogue3" src="videos/konusma3.mp4"></video>
       </a-assets>
-<a-entity position=" 0 2 4" camera look-controls wasd-controls>
+<a-entity position="4.607 2 15.941" camera look-controls wasd-controls>
   <a-entity cursor="fuse: true; fuseTimeout: 500"
             position="0 0 -1"
             geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
@@ -70,67 +131,76 @@
 <a-entity scale="4 4 4" position="0 -3 0">
 <!-- Table 1 -->
       <a-entity obj-model="obj: #table1-obj; mtl: #table1-mtl" position="-1 0.75 3"></a-entity>
+      <a-plane id="video_plane" material="src : #dialogue1" width="1.77" height="1" position="-0.93 1.504 2.696" scale="0.507 0.507 0.507" video-handler1></a-plane>
+      <a-image id="changing_image_desk1" position="-0.910 1.109 2.576" scale="0.5 0.235 1"></a-image>
 
-        <a-entity log="coffee" obj-model="obj: #coffee-card-obj; mtl: #coffee-card-mtl" position="1 0.75 3"
-        event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #coffeecard-img; visible: true"
-        event-set__leave="_event: mouseleave; _target: #changing_image_desk;"
-        ></a-entity>
-        <a-entity obj-model="obj: #spa-obj; mtl: #spa-mtl" position="1 0.75 3"
-        event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #spa-img; visible: true"
-        event-set__leave="_event: mouseleave; _target: #changing_image_desk; "
-        ></a-entity>
-        <a-entity obj-model="obj: #notebook-obj; mtl: #notebook-mtl" position="1 0.75 3"
-        event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #notebook-img; visible: true"
-        event-set__leave="_event: mouseleave; _target: #changing_image_desk; "
-        ></a-entity>
-        <a-entity obj-model="obj: #cup-obj; mtl: #cup-mtl" position="1 0.75 3"
-        event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #cup-img; visible: true"
-        event-set__leave="_event: mouseleave; _target: #changing_image_desk;"
-        ></a-entity>
+      <a-entity log="coffee" obj-model="obj: #coffee-card-obj; mtl: #coffee-card-mtl" position="1 0.75 3"
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk1; src: #coffeecard-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk1;"
+      ></a-entity>
+      <a-entity obj-model="obj: #spa-obj; mtl: #spa-mtl" position="1 0.75 3"
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk1; src: #spa-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk1; "
+      ></a-entity>
+      <a-entity obj-model="obj: #notebook-obj; mtl: #notebook-mtl" position="1 0.75 3"
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk1; src: #notebook-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk1; "
+      ></a-entity>
+      <a-entity obj-model="obj: #cup-obj; mtl: #cup-mtl" position="1 0.75 3"
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk1; src: #cup-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk1;"
+      ></a-entity>
 
 
 
 <!-- Table 2 -->
       <a-entity obj-model="obj: #table2-obj; mtl: #table2-mtl" position="1 0.75 3"></a-entity>
-      <a-video src="#dialogue2" width="4" height="2.25"></a-video>
+      <a-plane id="video_plane" material="src : #dialogue2" width="1.77" height="1" position= "1.106 1.504 2.696" scale="0.507 0.507 0.507" video-handler2></a-plane>
+      <a-image id="changing_image_desk2" position="1.127 1.109 2.576" scale="0.5 0.235 1"></a-image>
+
+
       <a-entity obj-model="obj: #collar-obj; mtl: #collar-mtl" position="1 0.75 3"
-      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #collar-img; visible: true"
-      event-set__leave="_event: mouseleave; _target: #changing_image_desk; "
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk2; src: #collar-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk2; "
       ></a-entity>
       <a-entity obj-model="obj: #plushie-obj; mtl: #plushie-mtl" position="1 0.75 3"
-      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #plushie-img; visible: true"
-      event-set__leave="_event: mouseleave; _target: #changing_image_desk; "
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk2; src: #plushie-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk2; "
       ></a-entity>
       <a-entity obj-model="obj: #toytrucs-obj; mtl: #toytrucs-mtl" position="1 0.75 3"
-      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #toytrucs-img; visible: true"
-      event-set__leave="_event: mouseleave; _target: #changing_image_desk; "
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk2; src: #toytrucs-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk2; "
       ></a-entity>
       <a-entity obj-model="obj: #kidsmagazine-obj; mtl: #kidsmagazine-mtl" position="1 0.75 3"
-      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #kidsmagazine-img; visible: true"
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk2; src: #kidsmagazine-img; visible: true"
       event-set__1="_event: mouseenter; _target: #dialogue2; play"
-      event-set__leave="_event: mouseleave; _target: #changing_image_desk; "
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk2; "
       ></a-entity>
 <!-- Table 3 -->
       <a-entity obj-model="obj: #table3-obj; mtl: #table3-mtl" position="1 0.75 3"></a-entity>
+      <a-plane id="video_plane" material="src : #dialogue3" width="1.77" height="1" position="2.998 1.504 2.696" scale="0.507 0.507 0.507" video-handler3></a-plane>
+      <a-image id="changing_image_desk3" position="3.041 1.109 2.576" scale="0.5 0.235 1"></a-image>
+
+
       <a-entity obj-model="obj: #earphones-obj; mtl: #earphones-mtl" position="1 0.75 3"
-      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #earphones-img; visible: true"
-      event-set__leave="_event: mouseleave; _target: #changing_image_desk; "
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk3; src: #earphones-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk3; "
       ></a-entity>
       <a-entity obj-model="obj: #bike-mount-obj; mtl: #bike-mount-mtl" position="1 0.75 3"
-      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #bike-mount-img; visible: true"
-      event-set__leave="_event: mouseleave; _target: #changing_image_desk;"
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk3; src: #bike-mount-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk3;"
       ></a-entity>
 	    <a-entity obj-model="obj: #powerbank-obj; mtl: #powerbank-mtl" position="1 0.75 3"
-      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #powerbank-img; visible: true"
-      event-set__leave="_event: mouseleave; _target: #changing_image_desk;"
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk3; src: #powerbank-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk3;"
       ></a-entity>
       <a-entity obj-model="obj: #speakers-obj; mtl: #speakers-mtl" position="1 0.75 3"
-      event-set__enter="_event: mouseenter; _target: #changing_image_desk; src: #speakers-img; visible: true"
-      event-set__leave="_event: mouseleave; _target: #changing_image_desk;"
+      event-set__enter="_event: mouseenter; _target: #changing_image_desk3; src: #speakers-img; visible: true"
+      event-set__leave="_event: mouseleave; _target: #changing_image_desk3;"
       ></a-entity>
 <!-- End tables -->
 </a-entity>
-      <a-image id="changing_image_desk" position="1 1.5 4" rotation="0 180" scale="2.125 0.75 1"></a-image>
+
     <!--  <a-sky src="#sky1" radius=5000></a-sky> -->
 <!-- <a-entity environment></a-entity> -->
     </a-scene>
